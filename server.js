@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-const Hapi = require('hapi');
+var Hapi = require('hapi');
 
-const server = new Hapi.Server(); 
+var server = new Hapi.Server(); 
 
 server.connection({
   host: 'localhost',

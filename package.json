@@ -17,7 +17,13 @@
   },
   "homepage": "https://github.com/pchinjr/hands-free#readme",
   "dependencies": {
+    "bcrypt": "^0.8.6",
+    "good": "^7.0.1",
     "hapi": "^13.4.1",
-    "inert": "^4.0.0"
+    "hapi-auth-cookie": "^6.1.1",
+    "inert": "^4.0.0",
+    "joi": "^8.4.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.4.20"
   }
 }
