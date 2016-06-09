@@ -18,6 +18,7 @@
   "homepage": "https://github.com/pchinjr/hands-free#readme",
   "dependencies": {
     "bcrypt": "^0.8.6",
+    "boom": "^3.2.1",
     "good": "^7.0.1",
     "hapi": "^13.4.1",
     "hapi-auth-cookie": "^6.1.1",
