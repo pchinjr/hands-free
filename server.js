@@ -3,14 +3,27 @@
 var Hapi = require('hapi');
 var Mongoose = require('mongoose');
 var UserStore = require('./lib/userStore');
+var Path = require('path');
+var Hoek = require('hoek');
 
 UserStore.initialize();
 
-var server = new Hapi.Server(); 
+var server = new Hapi.Server();
 
 server.connection({
   host: 'localhost',
-  port: 8080,  
+  port: 8080,
+});
+
+server.register(require('vision'), (err) => {
+    Hoek.assert(!err, err);
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        relativeTo: __dirname,
+        path: 'templates'
+    });
 });
 
 Mongoose.connect('mongodb://localhost/handsfree');
