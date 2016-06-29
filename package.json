@@ -23,6 +23,7 @@
     "handlebars": "^4.0.5",
     "hapi": "^13.4.1",
     "hapi-auth-cookie": "^6.1.1",
+    "hapi-login": "^1.2.0",
     "inert": "^4.0.0",
     "joi": "^8.4.1",
     "mongo": "^0.1.0",

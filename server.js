@@ -6,7 +6,7 @@ var UserStore = require('./lib/userStore');
 var Path = require('path');
 var Hoek = require('hoek');
 
-UserStore.initialize();
+//UserStore.initialize();
 
 var server = new Hapi.Server();
 
@@ -35,14 +35,14 @@ server.register(require('inert'), (err) => {
 server.register(require('hapi-auth-cookie'), function(err) {
 	if(err) console.log(err);
 
-	server.auth.strategy('default', 'cookie', {
+	server.auth.strategy('base', 'cookie', {
 		password: 'myPasswordisnotverysecure334555333ZE6#4bM9ot#KEzGPF4ciZXSfgbfJNWZ',
 		cookie: '334555333ZE6#4bM9ot#KEzGPF4ciZXSfgbfJNWZ',
 		redirectTo: '/login',
 		isSecure: false
 	});
 
-	server.auth.default('default');
+	server.auth.default('base');
 });
 
 server.route(require('./lib/routes'));
