@@ -3,11 +3,14 @@
 
 <h1>Welcome {{user.name}}</h1>
 your email is: {{user.email}}<br />
-
+<h2>Current Carriers in Database</h2>
+<br />
 <div id="main">
 </div>
+<br />
 <a href="/">home</a> <br/>
 <a href="/logout">logout here</a>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
   $.get( "api/v1/carriers", function( data ) {
